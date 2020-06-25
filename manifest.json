@@ -1,0 +1,14 @@
+{
+    "name": "Scola App",
+    "short_name": "Scola App",
+    "description": "Scola - Learning Management System",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#00a4e0",
+    "icons": [{
+        "src": "images/favicon/favicon-196x196.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }]
+}

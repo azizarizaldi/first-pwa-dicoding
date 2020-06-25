@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Scola - Learning Management System</title>
+    <!-- Meta Tag-->
+    <meta name="description" content="Scola - Learning Management System" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-128.png" sizes="128x128" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/my-style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="light-blue" role="navigation">
+        <div class="nav-wrapper container">
+            <a href="#" onclick="loadPage()" class="brand-logo" id="logo-container"><img
+                    style="margin-top: 10px; height: 47px;" src="/images/logo-white.svg"></a>
+            <a href="#" class="sidenav-trigger" data-target="nav-mobile"><i class="material-icons">menu</i></a>
+
+            <ul class="navigation right hide-on-med-and-down" id="nav-main"></ul>
+            <ul class="navigation sidenav" id="nav-mobile">
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div id="body-content"></div>
+
+    <footer class="page-footer light-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <img style="margin-top: 10px; height: 47px;" src="/images/logo-white.svg"></a>
+                    <p class="grey-text text-lighten-4"><i>Untuk pendidikan yang lebih baik</i></p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Kontak</h5>
+                    <ul>
+                        <li>
+                            <b>Telepon</b> : +62 812 8433 7800 (Krisna)
+                        </li>
+                        <li>
+                            <b>Email</b> : halo@scola.id
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container text-center">
+                © 2020 Copyright - Aziz Arif Rizaldi
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JS Library -->
+    <script src="js/library/jquery.min.js"></script>
+    <script src="js/library/materialize.min.js"></script>
+
+    <!-- JS App -->
+    <script src="js/app/app.js"></script>
+
+    <script>
+        // REGISTER SERVICE WORKER
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker
+                    .register("/service-worker.js")
+                    .then(function () {
+                        console.log("Pendaftaran ServiceWorker berhasil");
+                    })
+                    .catch(function () {
+                        console.log("Pendaftaran ServiceWorker gagal");
+                    });
+            });
+        } else {
+            console.log("ServiceWorker belum didukung browser ini.");
+            alert("ServiceWorker belum didukung browser ini.");
+        }
+    </script>
+</body>
+
+</html>
